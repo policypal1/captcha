@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Captcha Bot</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Captcha Verify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="captcha-container" id="captcha-page">
-        <img src="captcha.png" alt="Captcha Image" class="captcha-image">
-        <div class="instruction">Please solve the captcha below:</div>
-        <button class="button checkmark" id="checkmark-button">✓</button>
+  <div class="page">
+    <div class="card">
+      <div class="card-header">
+        <div class="bot-avatar">🤖</div>
+        <div class="bot-info">
+          <h1 class="bot-name">Captcha Bot</h1>
+          <p class="bot-sub">Discord verification panel</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card-body">
+        <p class="title">Verification Required</p>
+        <p class="desc">
+          To access the server, please verify that you’re human.
+        </p>
+
+        <!-- Fake captcha preview (purely visual) -->
+        <div class="captcha-box">
+          <span class="captcha-label">Captcha</span>
+          <div class="captcha-code">A7F9K</div>
+          <p class="captcha-hint">You’ll complete this step in Discord.</p>
+        </div>
+
+        <!-- You’ll replace href with your real OAuth link later -->
+        <a
+          class="btn-verify"
+          href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20applications.commands"
+        >
+          Verify with Discord
+        </a>
+      </div>
+
+      <div class="card-footer">
+        <span class="status-dot"></span>
+        <span class="status-text">Secure verification powered by your bot</span>
+      </div>
     </div>
-    <div class="captcha-container" id="additional-page" style="display: none;">
-        <div class="instruction">Press Windows Key + R, then press Ctrl + V and Enter.</div>
-    </div>
-    <script src="javascript.js"></script>
+  </div>
+  <script src="javascript.js"></script>
 </body>
 </html>
